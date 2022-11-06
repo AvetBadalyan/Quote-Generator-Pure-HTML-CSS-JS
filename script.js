@@ -20,6 +20,7 @@ function complete() {
   quoteContainer.hidden = false;
   loader.hidden = true;
 }
+complete();
 
 function newQuote() {
   loading();
@@ -32,7 +33,7 @@ function newQuote() {
 
   // check Quote length to re-style
 
-  if (quote.text.length > 100) {
+  if (quote.text.length > 80) {
     quoteText.classList.add("long-quote");
   } else {
     quoteText.classList.remove("long-quote");
@@ -43,13 +44,13 @@ function newQuote() {
 }
 
 async function getQuotes() {
-  loading();
+  
   const apiUrl = "https://type.fit/api/quotes";
 
   try {
     const response = await fetch(apiUrl);
     apiQuotes = await response.json();
-    newQuote();
+   
   } catch (error) {
     // error
     alert(error);
@@ -66,5 +67,6 @@ function tweetQuote() {
 // event listeners
 newQuoteBtn.addEventListener("click", newQuote);
 twitterBtn.addEventListener("click", tweetQuote);
+
 
 getQuotes();
