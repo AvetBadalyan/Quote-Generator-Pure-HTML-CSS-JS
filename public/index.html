@@ -49,5 +49,25 @@
 
     <!-- Script-->
     <script src="./script.js"></script>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDO1uosBZLtB2aiMYSkN0wWyusj2Ak4u38",
+        authDomain: "quote-generator-c7fdb.firebaseapp.com",
+        projectId: "quote-generator-c7fdb",
+        storageBucket: "quote-generator-c7fdb.appspot.com",
+        messagingSenderId: "813447349841",
+        appId: "1:813447349841:web:38fb2c330bcaa967db5a70",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    </script>
   </body>
 </html>
