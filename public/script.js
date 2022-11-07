@@ -44,13 +44,11 @@ function newQuote() {
 }
 
 async function getQuotes() {
-  
   const apiUrl = "https://type.fit/api/quotes";
 
   try {
     const response = await fetch(apiUrl);
     apiQuotes = await response.json();
-   
   } catch (error) {
     // error
     alert(error);
@@ -67,6 +65,5 @@ function tweetQuote() {
 // event listeners
 newQuoteBtn.addEventListener("click", newQuote);
 twitterBtn.addEventListener("click", tweetQuote);
-
 
 getQuotes();
